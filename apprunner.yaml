@@ -1,8 +1,4 @@
 version: 1.0
 runtime: python311
 run:
-  runtime-version: 3.11
-  pre-run:
-    - pip3 install --upgrade pip setuptools wheel
-    - pip3 install --no-cache-dir -r requirements-apprunner.txt
   command: streamlit run streamlit_app.py --server.port 8080
