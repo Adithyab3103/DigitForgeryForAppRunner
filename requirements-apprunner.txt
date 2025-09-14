@@ -1,0 +1,33 @@
+# Dependencies for AWS App Runner (with Python-version-specific pins)
+# This ensures wheels are available and compatible across App Runner Python versions.
+
+streamlit==1.35.0
+
+# TensorFlow
+# - 2.16.1: wheels for Python >= 3.10
+# - 2.13.1: wheels for Python 3.9
+# - 2.10.1: last release broadly compatible with Python 3.8 (and also supports 3.9/3.10)
+tensorflow==2.16.1; python_version >= "3.10"
+tensorflow==2.13.1; python_version == "3.9"
+tensorflow==2.10.1; python_version < "3.9"
+
+# NumPy
+# - 1.26.x drops Python 3.8 support
+# - 1.23.5 is compatible with TF 2.10.x and Python 3.8
+numpy==1.26.4; python_version >= "3.9"
+numpy==1.23.5; python_version < "3.9"
+
+# SciPy
+# - 1.11.x supports Python >= 3.9
+# - 1.10.x supports Python 3.8
+scipy==1.11.4; python_version >= "3.9"
+scipy==1.10.1; python_version < "3.9"
+
+# Matplotlib
+# - 3.8.x requires Python >= 3.9
+# - 3.7.x supports Python 3.8
+matplotlib==3.8.4; python_version >= "3.9"
+matplotlib==3.7.5; python_version < "3.9"
+
+Pillow==10.3.0
+opencv-python-headless==4.9.0.80
