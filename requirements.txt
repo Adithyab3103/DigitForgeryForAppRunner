@@ -1,15 +1,7 @@
-# Pinned for reliable deployment on AWS App Runner (Python 3.11)
-# Streamlit cache_resource is supported
-streamlit==1.35.0
-
-# TensorFlow CPU compatible with Python 3.11
-tensorflow==2.16.1
-
-# Scientific stack aligned with TF 2.16
+streamlit==1.33.0
+tensorflow==2.17.0
 numpy==1.26.4
-scipy==1.11.4
-matplotlib==3.8.4
-Pillow==10.3.0
-
-# Use headless OpenCV for server environments (no GUI/X11 deps)
 opencv-python-headless==4.9.0.80
+pillow==10.4.0
+matplotlib==3.8.4
+

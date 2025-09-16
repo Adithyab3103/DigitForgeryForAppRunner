@@ -6,6 +6,9 @@ from tensorflow import keras
 import matplotlib.pyplot as plt
 from PIL import Image, ImageOps
 import io
+import os
+print("Streamlit will listen on PORT:", os.environ.get("PORT"))
+
 
 def preprocess_image(image, target_size=(28, 28)):
     """Preprocess the uploaded image for prediction"""
@@ -139,11 +142,11 @@ def main():
     @st.cache_resource
     def load_model():
         try:
-            model = keras.models.load_model('enhanced_mnist_forgery_final.keras')
+            model = keras.models.load_model('enhanced_mnist_forgery.keras')
             return model
         except Exception as e:
             st.error(f"Error loading model: {e}")
-            st.error("Please make sure 'enhanced_mnist_forgery_final.keras' exists in the directory.")
+            st.error("Please make sure 'enhanced_mnist_forgery.keras' exists in the directory.")
             return None
     
     model = load_model()
